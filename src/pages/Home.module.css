@@ -1,0 +1,109 @@
+.homeImage {
+    height: 30rem;
+    background-image: linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url("../images/coffeePowder.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: #f5ebe0;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card1 {
+    height: 17rem;
+    width: 3rem;
+    font-size: .7rem;
+    transition: .3s;
+
+    border-radius: 50px;
+    border: 2px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        width: 15rem;
+        border-radius: 10px;
+    }
+}
+
+.card1 h2 {
+    transform: rotate(90deg);
+}
+
+.card2 {
+    height: 17rem;
+    width: 3rem;
+    font-size: .7rem;
+    transition: .3s;
+
+    border-radius: 50px;
+    border: 2px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        width: 15rem;
+        border-radius: 10px;
+    }
+}
+
+.card2 h2 {
+    transform: rotate(90deg);
+}
+
+.card3 {
+    height: 17rem;
+    width: 3rem;
+    font-size: .7rem;
+    transition: .3s;
+
+    border-radius: 50px;
+    border: 2px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        width: 15rem;
+        border-radius: 10px;
+    }
+}
+
+.card3 h2 {
+    transform: rotate(90deg);
+}
+
+.card4 {
+    height: 17rem;
+    width: 3rem;
+    font-size: .7rem;
+    transition: .3s;
+
+    border-radius: 50px;
+    border: 2px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        width: 15rem;
+        border-radius: 10px;
+    }
+}
+
+.card4 h2 {
+    transform: rotate(90deg);
+}
