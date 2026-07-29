@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem;
+}
+
+.footer h1 {
+    font-family: "Cherry Bomb One";
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+.footer p {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    text-align: end;
+    gap: .5rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.icons a {
+    color: #000;
+    text-decoration: none;
+}
