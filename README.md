@@ -11,7 +11,7 @@ Cafeteria online platform project, order managment, stores and more.
 - lucide-react
 - CSS Modules
 
-- pt-br🇧🇷
+- pt-br 🇧🇷
 # WebCafe ☕
 
 Plataforma online para uma cafeteria, com gerenciamento de pedidos, lojas e mais.
