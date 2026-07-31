@@ -1,16 +1,23 @@
-import { Coffee, Search } from "lucide-react";
+import { Coffee, Search, ArrowUp } from "lucide-react";
 import { HugeiconsIcon } from '@hugeicons/react'
 import { Instagram, SeatSelectorFreeIcons, WhatsappIcon, CoffeeBeansIcon, MailAtSign01Icon } from '@hugeicons/core-free-icons'
 
 import styles from "./Footer.module.css"
 
 export default function Footer() {
+
+    function scrollUp(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
         <>
         <footer className={styles.footer}>
             <div>
-            <h1><HugeiconsIcon icon={CoffeeBeansIcon} size={38} /> WebCafé</h1>
-            <p>Seu momento de pausa começa aqui</p>
+                <h1><HugeiconsIcon icon={CoffeeBeansIcon} size={38} /> WebCafé</h1>
+                <p>Seu momento de pausa começa aqui</p>
+                <a href="" onClick={scrollUp} className={styles.goUp}>Voltar para o topo <ArrowUp /></a>
             </div>
 
             <div className={styles.rightSide}>
@@ -28,7 +35,7 @@ export default function Footer() {
                     </a>
 
                 </div>
-                <p>Seg|Ter|Qua|Qui|Sex|Sáb|Dom</p>
+                <p>Seg|Ter|Qua|Qui|Sex|Sáb|Dom (7h-17h)</p>
                 <p>webcafee@gmail.com</p>
                 <p>(84)99412-5432</p>
             </div>

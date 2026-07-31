@@ -1,8 +1,13 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
-import styles from "./Home.module.css"
+import styles from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
+import { User } from "lucide-react";
 
 export function Home() {
+
+    const navigate = useNavigate();
+
     return (
         <>
         <Header />
@@ -45,6 +50,16 @@ export function Home() {
     
             <p>        
             Mais do que uma bebida, oferecemos uma experiência: sabor, aroma e a certeza de estar bebendo algo genuíno.</p>
+        </div>
+
+        <div className={styles.joinUs}>
+            <h1>Junte-se a nós! <User size={30} /></h1>
+            <div className={styles.buttons}>
+                <button onClick={() => navigate("/logsign")} className={styles.button}>Login</button>
+                <button onClick={() => navigate("/logsign")} className={styles.button}>Cadastre-se</button>
+            </div>
+        
+            <button onClick={() => useNavigate("/")} className={styles.button}>Pedir um café</button>
         </div>
         <Footer />
         </>

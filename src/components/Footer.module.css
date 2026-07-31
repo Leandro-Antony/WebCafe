@@ -27,6 +27,13 @@
     gap: .5rem;
 }
 
+.goUp {
+    margin-top: 1rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
 .icons {
     display: flex;
     align-items: center;
