@@ -3,6 +3,7 @@ import { Home } from "./pages/Home.jsx";
 import { LogSign } from "./pages/logSign.jsx";
 
 import "./global/styles.css"
+import "./global/coolors.css"
 
 function App() {
   

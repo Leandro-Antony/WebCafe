@@ -6,7 +6,7 @@ import { Coffee, Search } from "lucide-react";
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Instagram, SeatSelectorFreeIcons, WhatsappIcon, CoffeeBeansIcon } from '@hugeicons/core-free-icons';
 
-export default function Header() {
+export function Header() {
 
     const [search, setSearch] = useState("");
     const navigate = useNavigate();

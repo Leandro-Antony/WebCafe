@@ -1,0 +1,29 @@
+:root {
+  /* Marrons — escala completa, do mais escuro ao mais claro (fundo → destaque) */
+  --brown-950: #220901;
+  --brown-900: #260701;
+  --brown-800: #361805;
+  --brown-700: #613515;
+  --brown-600: #774936;
+  --brown-500: #934b00;
+  --brown-400: #99582a;
+
+  /* Creme/dourado — texto claro e fundos quentes */
+  --cream-100: #ffe6a7;
+  --cream-50: #f5ebe0;
+  --cream-25: #f3f3f3;
+
+  /* Rosados — cards dos grãos */
+  --rose-200: #cfa7a7;
+  --rose-300: #c99191;
+  --rose-400: #ad8080;
+  --rose-500: #7a5252;
+
+  /* Overlays de imagem */
+  --overlay-light: rgba(0, 0, 0, 0.4);
+  --overlay-medium: rgba(0, 0, 0, 0.5);
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+
+  /* Sombras */
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}

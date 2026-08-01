@@ -4,7 +4,7 @@ import { Instagram, SeatSelectorFreeIcons, WhatsappIcon, CoffeeBeansIcon, MailAt
 
 import styles from "./Footer.module.css"
 
-export default function Footer() {
+export function Footer() {
 
     function scrollUp(e) {
         e.preventDefault();
