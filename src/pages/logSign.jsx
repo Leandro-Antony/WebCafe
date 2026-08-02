@@ -5,10 +5,13 @@ import { Login } from "../components/Login.jsx";
 import { SignUp } from "../components/SignUp.jsx";
 
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-export function LogSign() {
+export function LogSign({ onSetMode }) {
 
-    const [mode, setMode] = useState("login");
+    const location = useLocation();
+    const [mode, setMode] = useState(location.state?.mode || "login");
+
 
     return (
         <>

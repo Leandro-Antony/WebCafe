@@ -55,8 +55,8 @@ export function Home() {
         <div className={styles.joinUs}>
             <h1>Junte-se a nós! <User size={30} /></h1>
             <div className={styles.buttons}>
-                <button onClick={() => navigate("/logsign")} className={styles.button}>Login</button>
-                <button onClick={() => navigate("/logsign")} className={styles.button}>Cadastre-se</button>
+                <button onClick={() => navigate("/logsign", { state: { mode: "login" } })} className={styles.button}>Login</button>
+                <button onClick={() => navigate("/logsign", { state: { mode: "signup" } })} className={styles.button}>Cadastre-se</button>
             </div>
         
             <button onClick={() => useNavigate("/")} className={styles.button}>Pedir um café</button>
