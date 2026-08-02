@@ -1,4 +1,4 @@
-import styles from "./Login.module.css";
+import styles from "./Form.module.css";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";

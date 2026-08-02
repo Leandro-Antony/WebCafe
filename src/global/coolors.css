@@ -5,8 +5,10 @@
   --brown-800: #361805;
   --brown-700: #613515;
   --brown-600: #774936;
+  --brown-600-transparent: rgb(119, 73, 54, 0.17);
   --brown-500: #934b00;
   --brown-400: #99582a;
+  
 
   /* Creme/dourado — texto claro e fundos quentes */
   --cream-100: #ffe6a7;

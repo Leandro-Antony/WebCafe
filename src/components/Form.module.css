@@ -5,17 +5,21 @@
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: var(--brown-600);
+    background-color: var(--brown-600-transparent);
 
     border-radius: 0 0 10px 10px;
+
+    transition: .3s ease-in-out;
 
 }
 
 .field {
     flex-grow: 1;
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+
+    align-items: flex-start;
+    gap: .3rem;
     width: 100%;
     color: var(--cream-25);
 }
@@ -26,6 +30,7 @@
 
     flex-grow: 1;
 
+    width: 100%;
     border-radius: 5px;
     border: 1px solid var(--cream-100);
     color: var(--cream-100);

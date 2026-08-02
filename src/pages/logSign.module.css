@@ -4,26 +4,43 @@
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
+    min-height: 100vh;
     gap: 4rem;
+    padding: 3rem;
 
-    background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url("../images/cafeteria2.jpg");
+    background-image: linear-gradient(rgb(0,0,0,0.8), rgb(0,0,0,0.5)), url("../images/cafeteria2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     color: var(--cream-25);
+
+    transition: .3s;
+}
+
+.body * {
+    transition: .3 ease-in-out;
+}
+
+.container {
+    border: 1px solid var(--cream-25);
+    border-radius: 10px;
+    background-color: var(--brown-600-transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .tabs {
     display: flex;
     width: 30rem;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 .tabs button {
     flex-grow: 1;
     border: none;
-    background-color: #4a473e;
+    transition: .3s ease-in-out;
     color: rgb(255,255,255,0.6);
     padding: .3rem;
     &:hover {
@@ -31,7 +48,14 @@
     }
 }
 
-.tabs .activeTab {
-    background-color: var(--brown-600);
+.tabs button:first-child {
+    background: linear-gradient(to left, var(--brown-600-transparent), rgb(74, 71, 62));
+}
+
+.tabs button:last-child {
+    background: linear-gradient(to right, var(--brown-600-transparent), rgb(74, 71, 62));
+}
+.tabs button.activeTab {
+    background: var(--brown-600-transparent);
     color: rgb(255,255,255);
 }
