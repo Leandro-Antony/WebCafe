@@ -2,7 +2,7 @@ import styles from "./Form.module.css";
 
 import { useForm } from "react-hook-form";
 
-export function SignUp() {
+export function SignUp({ onSwitchMode }) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     function onSubmit(data) {
@@ -47,8 +47,9 @@ export function SignUp() {
                 {errors.phone && <p>{errors.phone.message}</p>}
             </section>
 
-
             <button type="submit" className={styles.submitBtn}>Enviar</button>
+
+            <p>Já tenho conta! <button className={styles.switch} onClick={onSwitchMode}>Fazer login</button></p>
         </form>
     )
 }

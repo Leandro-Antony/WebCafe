@@ -18,10 +18,11 @@ export function LogSign() {
             <div className={styles.container}>
                 <div className={styles.tabs}>
                     <button className={mode === "login" ? styles.activeTab : ""} onClick={() => setMode("login")}>Login</button>
+                    
                     <button className={mode === "signup" ? styles.activeTab : ""} onClick={() => setMode("signup")}>Cadastre-se</button>
                 </div>
-                {mode === "login" && <Login />}
-                {mode === "signup" && <SignUp />}
+                {mode === "login" && <Login onSwitchMode={() => setMode("signup")} />}
+                {mode === "signup" && <SignUp onSwitchMode={() => setMode("login")} />}
             </div>
         </div>
         <Footer />

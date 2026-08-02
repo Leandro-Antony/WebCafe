@@ -3,7 +3,7 @@ import styles from "./Form.module.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-export function Login() {
+export function Login({ onSwitchMode }) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [pass, setPass] = useState("password");
 
@@ -26,6 +26,8 @@ export function Login() {
 
 
             <button type="submit" className={styles.submitBtn}>Enviar</button>
+            
+            <p>Não tem conta?<button className={styles.switch} onClick={onSwitchMode}>Crie a sua</button></p>
         </form>
     )
 }
