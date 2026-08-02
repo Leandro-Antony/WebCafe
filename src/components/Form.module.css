@@ -40,6 +40,36 @@
     color: var(--cream-100);
 }
 
+.passwordContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.passwordContainer aside {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+
+}
+
+.password {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.toggleBtn {
+    background-color: inherit;
+    color: var(--cream-25);
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .submitBtn {
     width: fit-content;
     padding: .3rem .7rem;

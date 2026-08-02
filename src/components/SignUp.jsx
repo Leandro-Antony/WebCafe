@@ -1,9 +1,18 @@
 import styles from "./Form.module.css";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Eye, EyeClosed } from "lucide-react";
 
 export function SignUp({ onSwitchMode }) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [pass, setPass] = useState("password");   
+    
+    function togglePassword() {
+        if (pass === "password") setPass("text");
+        if (pass === "text") setPass("password");
+    }
+
 
     function onSubmit(data) {
         console.log(data);
@@ -29,17 +38,24 @@ export function SignUp({ onSwitchMode }) {
                 {errors.email && <p>{errors.email.message}</p>}
             </section>
             
-            <section className={styles.field}>
-                <label>Senha:</label>
-                <input type="password" {...register("password", {required: "Campo obrigatório!", minLength: {value: 6, message: "Mínimo de 6 caracteres."}})} placeholder="EuAmoCafé123" />
-                {errors.password && <p>{errors.password.message}</p>}
-            </section>
+            <div className={styles.passwordContainer}>
+                <aside>
+                    <section className={styles.field}>
+                        <label>Senha:</label>
+                        <input type={pass} {...register("password", {required: "Campo obrigatório!", minLength: {value: 6, message: "Mínimo de 6 caracteres."}})} placeholder="EuAmoCafé123" />
+                        {errors.password && <p>{errors.password.message}</p>}
+                    </section>
 
-            <section className={styles.field}>
-                <label>Confirmar senha:</label>
-                <input type="password" {...register("confirmPassword", {required: "Campo obrigatório!", minLength: {value: 6, message: "Mínimo de 6 caracteres."}, validate: (value) => value === watch("password") || "As senhas não coincidem" })} placeholder="EuAmoCafé123" />
-                {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
-            </section>
+                    <section className={styles.field}>
+                        <label>Confirmar senha:</label>
+                        <input type={pass} {...register("confirmPassword", {required: "Campo obrigatório!", minLength: {value: 6, message: "Mínimo de 6 caracteres."}, validate: (value) => value === watch("password") || "As senhas não coincidem" })} placeholder="EuAmoCafé123" />
+                        {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
+                    </section>
+                </aside>
+
+                <button type="button" onClick={togglePassword} className={styles.toggleBtn}>{pass === "password" ? <Eye /> : <EyeClosed />}</button>
+            
+            </div>
             
             <section className={styles.field}>
                 <label>Celular:</label>
